@@ -4,8 +4,13 @@
   "properties": {
     "unsub": {
       "type": "boolean",
-      "description": "True if the email is a request to unsubscribe"
+      "description": "True if the email is requesting unsubscribe, opt out, or removal"
+    },
+    "cleanemail": {
+      "type": "string",
+      "description": "A cleaned version of the unsubscribe request text. Empty if unsub is false."
     }
   },
-  "required": ["unsub"]
+  "required": ["unsub", "cleanemail"],
+  "additionalProperties": false
 }
